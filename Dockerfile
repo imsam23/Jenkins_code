@@ -1,4 +1,3 @@
 FROM busybox
-COPY . /app
-WORKDIR /app
-CMD ["ls"]
+RUN /bin/bash -c "Satyam"
+ENV ENV_VAR="SAM"
