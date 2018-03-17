@@ -1,15 +1,11 @@
 pipeline {
-  agent {
-    node {
-      label '7-alpine'
+    agent { dockerfile true }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
     }
-    
-  }
-  stages {
-    stage('Test') {
-      steps {
-        sh 'node --version'
-      }
-    }
-  }
 }
