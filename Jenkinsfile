@@ -1,10 +1,10 @@
-pipeline {
+opipeline {
     agent { dockerfile true }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+                echo 'Hi There'
+                echo $ENV_VAR
             }
         }
     }
